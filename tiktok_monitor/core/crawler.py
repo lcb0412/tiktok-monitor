@@ -8,7 +8,7 @@ from typing import Optional, Dict, Any, List
 from urllib.parse import urlencode, urlparse
 from .signer import XBogusSigner
 from .logger import logger
-from ..storage.repositories import VideoRepository, UserRepository
+from storage.repositories import VideoRepository, UserRepository
 
 
 class TikTokCrawler:

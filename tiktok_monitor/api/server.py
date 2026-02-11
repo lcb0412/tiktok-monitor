@@ -6,14 +6,14 @@ from fastapi import FastAPI, HTTPException, Depends
 from typing import List, Optional
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from ..storage.database import get_db, init_db
-from ..storage.repositories import (
+from storage.database import get_db, init_db
+from storage.repositories import (
     VideoRepository,
     UserRepository,
     MonitorTaskRepository,
 )
-from ..core.crawler import CrawlerManager
-from ..core.config import settings
+from core.crawler import CrawlerManager
+from core.config import settings
 
 app = FastAPI(
     title="TikTok Monitor API", description="TikTok数据监控API", version="1.0.0"

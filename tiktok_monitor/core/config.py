@@ -90,6 +90,8 @@ class LoggingConfig(BaseModel):
 class Config(BaseModel):
     """主配置类"""
 
+    cookie: str = ""
+    proxy: str = ""
     database: DatabaseConfig = Field(default_factory=DatabaseConfig)
     redis: RedisConfig = Field(default_factory=RedisConfig)
     app: AppConfig = Field(default_factory=AppConfig)

@@ -6,7 +6,8 @@ import asyncio
 import sys
 import os
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, PROJECT_ROOT)
 
 from core.config import settings
 from core.logger import logger
@@ -28,7 +29,7 @@ async def main():
 
     import uvicorn
 
-    uvicorn.run(app, host=settings.host, port=settings.port)
+    uvicorn.run(app, host=settings.app.host, port=settings.app.port)
 
 
 if __name__ == "__main__":
