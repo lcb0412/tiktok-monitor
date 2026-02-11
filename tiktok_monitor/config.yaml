@@ -1,9 +1,15 @@
 # TikTok Monitor Configuration
 # ====================================
 
+# TikTok Cookie (可选)
+cookie: ""
+
+# TikTok 代理 (可选，格式: http://ip:port)
+proxy: ""
+
 # 数据库配置 (SQLite - 轻量级嵌入式数据库)
 database:
-  path: "E:/tk_data/Douyin_TikTok_Download_API-4.1.2/tiktok_monitor/data/tiktok_monitor.db"
+  path: "data/tiktok_monitor.db"
   table_prefix: ""
 
 # Redis配置 (可选，用于缓存)
@@ -15,7 +21,7 @@ redis:
 # 应用配置
 app:
   host: "0.0.0.0"
-  port: 8000
+  port: 7676
   debug: false
   workers: 1
 
